@@ -1,0 +1,306 @@
+@import "bourbon/bourbon";
+$retina-filename: "@2x";
+
+* { @include box-sizing(border-box); }
+
+body {
+  background-color: #fff;
+  margin: 0;
+  font-family: "old-standard", TimesNewRoman, "Times New Roman", Times, serif;
+  color: #fff;
+}
+
+h1, h2 {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+i { font-style: normal; }
+
+.card {
+  width: 300px;
+  margin: 8px 8px 8px 0;
+  padding: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index:2;
+}
+.card:hover {
+  z-index: 50;
+}
+
+/* Cards */
+
+#gene {
+  width: 120px;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  @include transform(translate(-320%, -320%));
+  h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: NeueHaasGrotesk, "Neue Haas Grotesk", HelveticaNeue, "Helvetica Neue", Helvetica, sans-serif;  
+  }
+}
+
+#open-closed {
+  display: none;
+  @include transform(translate(-80%, -140%));
+  background-color: #000;
+  color: #f60;
+  border: 8px solid #fff;
+  padding: 16px 12px 0 16px;
+  &.open { display: block; }
+  h2 {
+    font-family: "komu-a";
+    font-size: 84px;
+    letter-spacing: 1px;
+    line-height: 0.9;
+  }
+}
+
+#hours {
+  @include transform(translate(-100%, -40%));
+  dl, dt, dd {
+    margin: 0;
+    padding: 0;  
+  }
+  dt {
+    font-size: 1em;
+    line-height: 1;
+    margin-top: 1em;
+  }
+  dd {
+    font-family: "lust";
+    font-size: 4.75em;
+    line-height: 0.75;
+    text-rendering: optimizeLegibility;
+    margin-top: 0.125em;
+  }
+  dd i {
+    font-weight: normal;
+    font-family: Times, "Times New Roman", TimesNewRoman;
+    vertical-align: top;
+    line-height: 0.5;
+  }
+}
+
+#location {
+  @include transform(translate(11%, -50%));
+  img {
+    margin: 0.5em 0;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  address {
+    font-style: normal;
+    margin-top: 0.5em;
+    a { display: block; }
+  }
+  #bus-routes {
+    margin: 0.5em 0 0 0;
+    background-repeat: no-repeat;
+    background-position: center left;
+    line-height: 1;
+    padding-left: 16px;
+  }
+  #bus-routes i {
+    font-family: NeueHaasGrotesk, "Neue Haas Grotesk", HelveticaNeue, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 600;
+  }
+}
+
+#contact {
+  @include transform(translate(-130%, 75%));
+  div {
+    font-size: 24px;
+    font-family: "old-standard", TimesNewRoman, "Times New Roman", Times, serif;
+  }
+  i {
+    font-weight: bold;
+    display: inline-block;
+    width: 20px;
+    font-family: ArialUnicodeMS, "Arial Unicode MS";
+    font-size: 24px;
+    text-align: right;
+  }
+}
+
+/* Font options */
+
+.font-shaded h2 {
+  font-family: "gothic-open-shaded";
+  font-size: 48px;
+  letter-spacing: -2px;
+}
+
+.font-chippewa h2 {
+  text-transform: lowercase;
+  font-family: "chippewa-falls";
+  font-size: 72px;
+  margin: -0.1em 0 0.25em 0;
+  line-height: 0.7;
+}
+
+.font-shlop h2 {
+  font-family: "shlop";
+  font-size: 66px;
+  letter-spacing: 1px;
+  line-height: 0.9;
+  margin-bottom: 12px;
+}
+
+.font-lust h2 {
+  font-family: "lust";
+  font-size: 51px;
+  font-style: italic;
+  line-height: 0.9;
+  margin-bottom: 12px;
+}
+
+.font-bello h2 {
+  font-family: "bello-caps";
+  font-size: 66px;
+  line-height: 0.7;
+  margin-bottom: 12px;
+}
+
+.font-alexander h2 {
+  font-family: "rtf-alexander-quill";
+  font-size: 60px;
+  line-height: 0.9;
+  margin-bottom: 12px;
+}
+
+/* Colour options */
+
+.colour-bw {
+  color: #000;
+  background-color: #fff;
+  #map { background-color: #000; }
+  #bus-routes { @include retina-image("img/bus-flag-bw", 9px 12px); }
+}
+
+.colour-blue {
+  color: #00f;
+  background-color: #fff;
+  #map { background-color: #00f; }
+  #bus-routes { @include retina-image("img/bus-flag-blue", 9px 12px); }
+}
+
+.colour-green {
+  color: #000;
+  background-color: #cf9;
+  #map { background-color: #000; }
+  #bus-routes { @include retina-image("img/bus-flag-bw", 9px 12px); }
+}
+
+.colour-red {
+  color: #d80044;
+  background-color: #fff5f8;
+  #map { background-color: #d80044; }
+  #bus-routes { @include retina-image("img/bus-flag-red", 9px 12px); }
+}
+
+.colour-teal {
+  color: #00b59f;
+  background-color: #f3fff4;
+  #map { background-color: #00b59f; }
+  #bus-routes { @include retina-image("img/bus-flag-teal", 9px 12px); }
+}
+
+.colour-orange {
+  color: #de7100;
+  background-color: #ffecdf;
+  #map { background-color: #de7100; }
+  #bus-routes { @include retina-image("img/bus-flag-orange", 9px 12px); }
+}
+
+.images {
+  padding: 10px;
+  text-align: center;
+}
+
+.image {
+  display: inline-block;
+  width: 306px;
+  height: 306px;
+  position: relative;
+  span {
+    font-family: NeueHaasGrotesk, "Neue Haas Grotesk", HelveticaNeue, "Helvetica Neue", Helvetica, sans-serif;
+    color: white;
+    opacity: 0;
+    padding: 2px 6px;
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    z-index: 1;
+    @include transition(1s opacity ease);
+    @include transition-delay(500ms);
+    a { color: white; }
+  }
+  &:hover { span { opacity: 1; } }
+  img {
+    border: 0;
+    padding: 2px 4px;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+    -webkit-transition: -webkit-filter 10s ease; 
+    -webkit-transform: translateZ(0); /* Fixes retina blurriness. */
+    &:hover {
+      filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+      -webkit-filter: grayscale(20%);
+      -webkit-transition: -webkit-filter .1s ease; 
+    }
+  }
+}
+
+@media (max-width: 938px) {
+  .image {
+    width: 245px; height: 245px;
+    img { width: 245px; height: 245px; }
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    background-color: #000;
+  }
+  .card {
+    position: static;
+    top: auto;
+    left: auto;
+    margin: 0 auto;
+  }
+  .images {
+    padding: 0px;
+  }
+  #gene {
+    border: 2px solid white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #contact i {
+    font-size: 16px;
+  }
+}
