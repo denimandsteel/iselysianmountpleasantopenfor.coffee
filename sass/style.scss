@@ -83,6 +83,12 @@ a:hover {
   }
 }
 
+.answer--wide {
+  @media (max-width: 767px) {
+    font-size: 8em;
+  }
+}
+
 .h-sm {
   font-size: 1rem;
   font-weight: 500;
