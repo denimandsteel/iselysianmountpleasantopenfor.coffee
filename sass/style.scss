@@ -47,7 +47,6 @@ a:link, a:visited {
 }
 
 a:hover {
-  // text-decoration: underline;
   border-bottom-color: currentColor;
 }
 
@@ -55,7 +54,7 @@ a:hover {
   position: relative;
   z-index: 100;
   width: 100vw;
-  min-height: 90vh;
+  min-height: 87vh;
   background-color: transparent;
 
   display: table;
@@ -69,10 +68,8 @@ a:hover {
 
 .answer {
   font-family: "freight-big-pro";
-  // font-weight: 600;
   font-weight: 200;
   font-style: normal;
-  // letter-spacing: -0.01em;
   font-size: 20rem;
   text-align: center;
   line-height: 0.75;
