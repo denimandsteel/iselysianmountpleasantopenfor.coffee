@@ -25,7 +25,8 @@ $(function() {
       if (currentURL !== payload.pagination.next_url) {
         currentURL = payload.pagination.next_url;
         payload.data.forEach(function(item) {
-          var resolution = 'low_resolution';
+          // var resolution = 'low_resolution';
+          var resolution = 'standard_resolution';
           $('<div class="image"><span><a href="' + item.link + '">' + item.user.username + '</a></span><img src="' + item.images[window.devicePixelRatio > 1 ? 'standard_resolution' : resolution].url + '" width="' + item.images[resolution].width + '" height="' + item.images[resolution].height + '"></div>').appendTo('.images');
         });
         $(window).bind('scroll', scroll);
