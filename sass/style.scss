@@ -81,6 +81,10 @@ a:hover {
 }
 
 .answer--wide {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: 14em;
+  }
+
   @media (max-width: 767px) {
     font-size: 8em;
   }
