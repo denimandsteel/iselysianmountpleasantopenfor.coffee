@@ -115,7 +115,10 @@ $(function() {
   var open = new Date(Date.UTC(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), openHour, 30, 0));
   var close = new Date(Date.UTC(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), openHour + 10, 30 + 30, 0));
   if (open < currentDate && currentDate < close) {
-    $('#open-closed').addClass('open');
+    $('body').addClass('open');
+  }
+  else {
+    $('body').addClass('closed'); 
   }
   
 });
