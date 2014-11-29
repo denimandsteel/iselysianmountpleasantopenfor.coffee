@@ -1,5 +1,5 @@
-GENE Coffee Bar's website was built by hand in one 
-day by Todd Sieling, Tylor Sherman, Arian Khosravi,
+This website was built by hand in a few hours 
+by Todd Sieling, Tylor Sherman, Arian Khosravi,
 with design in code by Sam Dal Monte.
 
 How we did it: http://denimandsteel.com/work/gene/
@@ -10,4 +10,4 @@ Or holler @DenimAndSteel
 You should work with Sam: http://samdalmonte.com
 
 Site rolled using Jekyll and hosted on Github Pages.
-Full source: https://github.com/denimandsteel/gene
+Full source: https://github.com/denimandsteel/iselysianmountpleasantopenfor.coffee
