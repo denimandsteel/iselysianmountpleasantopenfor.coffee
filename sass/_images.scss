@@ -1,16 +1,20 @@
 .images {
-  padding: 10px;
+  padding: 2rem 1rem;
+  margin: 0;
   text-align: center;
+  line-height: 0;
 }
 
 .image {
   display: inline-block;
-  width: 306px;
-  height: 306px;
   position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 1rem;
+
   span {
-    // font-family: NeueHaasGrotesk, "Neue Haas Grotesk", HelveticaNeue, "Helvetica Neue", Helvetica, sans-serif;
     color: white;
+    line-height: 1.5;
     opacity: 0;
     padding: 2px 6px;
     background: rgba(0,0,0,0.2);
@@ -23,31 +27,46 @@
     a { color: white; }
   }
   &:hover { span { opacity: 1; } }
+
   img {
     border: 0;
-    padding: 2px 4px;
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
-    -webkit-transition: -webkit-filter 10s ease; 
-    -webkit-transform: translateZ(0); /* Fixes retina blurriness. */
-    &:hover {
-      filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
-      -webkit-filter: grayscale(20%);
-      -webkit-transition: -webkit-filter .1s ease; 
+    width: 100%;
+    height: 100%;
+    // padding: 2px 4px;
+
+    .closed & {
+      filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+      filter: gray; /* IE6-9 */
+      -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+      -webkit-transition: -webkit-filter 10s ease; 
+      -webkit-transform: translateZ(0); /* Fixes retina blurriness. */
+
+      &:hover {
+        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+        -webkit-filter: grayscale(0%);
+        -webkit-transition: -webkit-filter .1s ease; 
+      }
     }
   }
 }
 
 @media (max-width: 938px) {
   .image {
-    width: 245px; height: 245px;
-    img { width: 245px; height: 245px; }
+    margin: 0.75rem;
+    // width: 245px; height: 245px;
+    // img { width: 245px; height: 245px; }
   }
 }
 
 @media (max-width: 767px) {
   .images {
-    padding: 0px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 374px) {
+  .image {
+    width: 265px;
+    height: 265px;
   }
 }

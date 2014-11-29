@@ -1,90 +1,121 @@
 @import "bourbon/bourbon";
 $retina-filename: "@2x";
 
+$light-colour: hsl(20,6%,95%);
+$dark-colour:  hsl(20,2%,7%);
+
 * { @include box-sizing(border-box); }
 
+@media (max-width: 374px) {
+  html {
+    font-size: 0.85em;
+  }
+}
+
 body {
-  background-color: #fff;
   margin: 0;
   font-family: "source-code-pro", "Source Code Pro", monospace;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  color: $dark-colour;
+  background-color: $light-colour;
+
+  &.closed {
+    color: $light-colour;
+    background-color: $dark-colour;
+  }
+}
+
+::selection {
+  background: fade-out(darken(saturate($light-colour,75%),50%),0.5);
 }
 
 h1,
 h2,
 h3 {
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 }
 
-h1 {
-  font-family: "freight-big-pro";
-  font-weight: 200;
-  font-style: normal;
-  // letter-spacing: -0.01em;
-  font-size: 15em;
-  color: #222;
-  text-align: center;
-  line-height: 0.75;
-  margin: 0 auto;
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid fade-out($dark-colour,0.8);
 
-  @media (max-width: 767px) {
-    font-size: 8em;
+  .closed & {
+    border-bottom-color: fade-out($light-colour,0.6);
   }
 }
 
-h2,
-h3 {
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  color: #222;
-  text-transform: uppercase;
-  line-height: 1.1;
-  display: block;
-  width: 100vw;
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 101;
-  text-align: center;
-  padding: 0 1rem;
-}
-
-h2 {
-  padding-top: 1rem;
-}
-
-h3 {
-  bottom: 0;
-  padding-bottom: 1rem;
+a:hover {
+  // text-decoration: underline;
+  border-bottom-color: currentColor;
 }
 
 .hero {
-  // display: block;
-  // position: fixed;
   position: relative;
   z-index: 100;
   width: 100vw;
   min-height: 90vh;
-  // pointer-events: none;
   background-color: transparent;
 
   display: table;
 
-  .centered {
+  .hero-centered {
     display: table-cell;
     vertical-align: middle;
     padding-bottom: 4rem;
   }
 }
 
-a:link, a:visited {
-  text-decoration: none;
-  color: inherit;
+.answer {
+  font-family: "freight-big-pro";
+  // font-weight: 600;
+  font-weight: 200;
+  font-style: normal;
+  // letter-spacing: -0.01em;
+  font-size: 20rem;
+  text-align: center;
+  line-height: 0.75;
+  margin: 0 auto;
+
+  @media (max-width: 767px) {
+    font-size: 14em;
+  }
 }
 
-a:hover {
-  text-decoration: underline;
+.h-sm {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  z-index: 101;
+  text-align: center;
+  padding: 0 1rem;
+
+  .hero & {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+}
+
+.hero-top {
+  top: 0;
+  padding-top: 1rem;
+}
+
+.hero-bottom {
+  bottom: 0;
+  padding-bottom: 1rem;
+}
+
+.images {
+  // padding: 2rem 1rem;
+  .open & {
+    background-color: white;
+  }
 }
 
 @import "images";
