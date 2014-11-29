@@ -1,3 +1,3 @@
-# Gene Cafe
+# Is Elysian Mount Pleasant Open for Coffee?
 
-This is the website for Gene Cafe: http://genecoffeebar.com/
+http://iselysianmountpleasantopenfor.coffee/
