@@ -6,7 +6,7 @@ $(function() {
     'https://api.instagram.com/v1/locations/393873950/media/recent',
     'https://api.instagram.com/v1/locations/487638749/media/recent',
   ];
-  // var scrollPage = 0;
+  var scrollPage = 0;
 
   function scroll() {
     if ($(window).scrollTop() + $(window).height() > $(document).height() - 800) {
