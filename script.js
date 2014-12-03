@@ -5,6 +5,7 @@ $(function() {
   var imageLocations = [
     'https://api.instagram.com/v1/locations/393873950/media/recent',
     'https://api.instagram.com/v1/locations/487638749/media/recent',
+    'https://api.instagram.com/v1/locations/493732972/media/recent',
   ];
   var scrollPage = 0;
 
