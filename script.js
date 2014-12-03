@@ -86,7 +86,7 @@ $(function() {
   }
   else {
     $('body').addClass('closed');
-    $('.answer-js').html('Closed for today');
+    $('.answer-js').html('Closed');
   }
   
 });
